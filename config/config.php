@@ -1,5 +1,5 @@
 <?php
-define('DOMINIO', 'https://imobiliaria.loires.com.br');
+define('DOMINIO', 'https://controle.bigbenimoveis.com');
 /**
  * @const SITE_NAME - nome da pasta remota para upload de arquivos externos ;
 */

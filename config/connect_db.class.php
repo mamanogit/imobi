@@ -16,9 +16,9 @@ class connect_db
 	{
         
         //************************************************
-    	$this->user_DB = 'root';
-		$this->pass_DB = '';
-		$this->data_DB = 'imobi';
+    	$this->user_DB = 'bigbe175_root';
+		$this->pass_DB = 'marcelo';
+		$this->data_DB = 'bigbe175_controle';
 		$this->host_DB = 'localhost';
         /* Ativa as exceptions */
         mysqli_report(MYSQLI_REPORT_STRICT|MYSQLI_REPORT_ERROR);
