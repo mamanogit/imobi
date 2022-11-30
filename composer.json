@@ -11,9 +11,6 @@
             "email": "laudirbispo@outlook.com",
             "homepage": "https://www.facebook.com/laudirbispo"
         }
-    ],
-    "require" : {
-        "php": "^5.6"
-    }
+    ]
 
 }
