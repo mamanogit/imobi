@@ -16,8 +16,8 @@ class connect_db
 	{
         
         //************************************************
-    	$this->user_DB = 'bigbe175_root';
-		$this->pass_DB = 'marcelo';
+    	$this->user_DB = 'bigbe175_imobiliaria';
+		$this->pass_DB = 'Mudar@123';
 		$this->data_DB = 'bigbe175_controle';
 		$this->host_DB = 'localhost';
         /* Ativa as exceptions */
