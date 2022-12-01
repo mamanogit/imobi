@@ -98,14 +98,7 @@ $('#form-auth').on('submit', function (e) {
     var formDados = jQuery(this).serialize();
     var formUrl = jQuery(this).attr('action');
     
-    jQuery.ajax({
-      type: "POST",
-      async:true,
-      cache:false,
-      url: formUrl,
-      dataType: 'json',
-      data: formDados
-    }).done(successLogin(data)).fail(errorLogin(data));
+    handleLogin().done(successLogin(data)).fail(errorLogin(data));
 
     function successLogin(data) {
 
@@ -127,6 +120,19 @@ $('#form-auth').on('submit', function (e) {
          {
              $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + data.message + '</div>');
          }
+
+    }
+
+    function handleLogin() {
+
+        return jQuery.ajax({
+          type: "POST",
+          async:true,
+          cache:false,
+          url: formUrl,
+          dataType: 'json',
+          data: formDados
+        });
 
     }
 
