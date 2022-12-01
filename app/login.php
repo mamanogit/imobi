@@ -98,7 +98,9 @@ $('#form-auth').on('submit', function (e) {
     var formDados = jQuery(this).serialize();
     var formUrl = jQuery(this).attr('action');
     
-    handleLogin().done(successLogin(data)).fail(errorLogin(data));
+    handleLogin().done(function(result) {
+        successLogin(result)
+    }).fail(errorLogin());
 
     function successLogin(data) {
 
@@ -136,7 +138,7 @@ $('#form-auth').on('submit', function (e) {
 
     }
 
-    function errorLogin(data) {
+    function errorLogin() {
           $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>O servidor não está respondendo.</div>');
     }
 
