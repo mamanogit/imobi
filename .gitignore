@@ -1,1 +1,3 @@
 .htaccess
+
+./config/connect_db.class.php
