@@ -105,10 +105,7 @@ $('#form-auth').on('submit', function (e) {
       url: formUrl,
       dataType: 'json',
       data: formDados
-    });
-
-    request.done(successLogin(data));
-    request.fail(errorLogin(data));
+    }).request.done(successLogin(data)).request.fail(errorLogin(data));
 
     function successLogin(data) {
 
