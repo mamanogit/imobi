@@ -98,14 +98,14 @@ $('#form-auth').on('submit', function (e) {
     var formDados = jQuery(this).serialize();
     var formUrl = jQuery(this).attr('action');
     
-    const request = jQuery.ajax({
+    jQuery.ajax({
       type: "POST",
       async:true,
       cache:false,
       url: formUrl,
       dataType: 'json',
       data: formDados
-    }).request.done(successLogin(data)).request.fail(errorLogin(data));
+    }).done(successLogin(data)).fail(errorLogin(data));
 
     function successLogin(data) {
 
