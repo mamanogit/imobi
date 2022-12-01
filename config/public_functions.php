@@ -278,11 +278,11 @@ function fileRemoteExist ($filename)
 {       
     $file_headers = @get_headers($filename);
 
-    if($file_headers[0] == 'HTTP/1.1 404 Not Found')
+    if(array_key_exists(0, $file_headers) && $file_headers[0] == 'HTTP/1.1 404 Not Found')
     {
          return false;
     } 
-    else if ($file_headers[0] == 'HTTP/1.0 302 Found' && $file_headers[7] == 'HTTP/1.0 404 Not Found')
+    else if (array_key_exists(0, $file_headers) && $file_headers[0] == 'HTTP/1.0 302 Found' && array_key_exists(7, $file_headers) && $file_headers[7] == 'HTTP/1.0 404 Not Found')
     {
         return false;
     } 
