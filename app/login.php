@@ -120,7 +120,7 @@ $('#form-auth').on('submit', function (e) {
          }
          else 
          {
-             $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + 'status code other: ' + data.message + '</div>');
+             $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + 'status code other:' + data.message + '</div>');
          }
 
     }
@@ -132,7 +132,7 @@ $('#form-auth').on('submit', function (e) {
           async:true,
           cache:false,
           url: formUrl,
-          //dataType: 'text json',
+          dataType: "json",
           data: formDados
         });
 

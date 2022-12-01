@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 require_once ($_SERVER['DOCUMENT_ROOT'].'/config/autoload.php');
 require_once ($_SERVER['DOCUMENT_ROOT'].'/config/config.php');
 require_once ($_SERVER['DOCUMENT_ROOT'].'/app/controls/adminFunctions.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/config/public_functions.php');
+//require_once ($_SERVER['DOCUMENT_ROOT'].'/config/public_functions.php');
 
 use app\controls\authUser;
 use app\controls\session;
@@ -65,6 +65,7 @@ else
                     );
 
                     echo json_encode($response);
+                    exit;
                 }
                 else
                 {
