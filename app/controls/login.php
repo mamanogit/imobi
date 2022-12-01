@@ -63,7 +63,8 @@ else
                         'message' => 'Usuário autenticado com sucesso!',
                         'link'    => '',
                     );
-                    die(json_encode($response));
+                    echo json_encode($response);
+                    die();
                 }
                 else
                 {
