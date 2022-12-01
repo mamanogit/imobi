@@ -107,6 +107,7 @@ $('#form-auth').on('submit', function (e) {
       data: formDados,
       success: function( data )
       {  
+        console.log(data);
          if(data.status === 'success')
          {   
              location.href="/app/admin";
