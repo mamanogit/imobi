@@ -98,16 +98,22 @@ $('#form-auth').on('submit', function (e) {
     var formDados = jQuery(this).serialize();
     var formUrl = jQuery(this).attr('action');
     
-    jQuery.ajax({
+    const request = jQuery.ajax({
       type: "POST",
       async:true,
       cache:false,
       url: formUrl,
       dataType: 'json',
-      data: formDados,
-      success: function( data )
-      {  
+      data: formDados
+    });
+
+    request.done(successLogin(data));
+    request.fail(errorLogin(data));
+
+    function successLogin(data) {
+
         console.log(data);
+
          if(data.status === 'success')
          {   
              location.href="/app/admin";
@@ -125,13 +131,12 @@ $('#form-auth').on('submit', function (e) {
              $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + data.message + '</div>');
          }
 
-      },
-      error: function ()
-      {
-          $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>O servidor não está respondendo.</div>');
-      }
+    }
 
-    }); 
+    function errorLogin(data) {
+          $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>O servidor não está respondendo.</div>');
+    }
+
 }); 
 </script>
 </body>
