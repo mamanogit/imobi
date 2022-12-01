@@ -120,7 +120,7 @@ $('#form-auth').on('submit', function (e) {
          }
          else 
          {
-             $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + data.message + '</div>');
+             $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + 'status code other: ' + data.message + '</div>');
          }
 
     }
@@ -139,7 +139,7 @@ $('#form-auth').on('submit', function (e) {
     }
 
     function errorLogin() {
-          $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>O servidor não está respondendo.</div>');
+          $('.response-login').html('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> $.ajax().fail : O servidor não está respondendo.</div>');
     }
 
 }); 
