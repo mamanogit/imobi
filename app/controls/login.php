@@ -63,8 +63,8 @@ else
                         'message' => 'Usuário autenticado com sucesso!',
                         'link'    => '',
                     );
-                    header('Content-Type: application/json');
-                    die(json_encode($response));
+
+                    echo json_encode($response);
                 }
                 else
                 {
