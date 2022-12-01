@@ -132,7 +132,6 @@ $('#form-auth').on('submit', function (e) {
           async:true,
           cache:false,
           url: formUrl,
-          dataType: 'json',
           data: formDados
         });
 
