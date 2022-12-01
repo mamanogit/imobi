@@ -275,14 +275,18 @@ function create_slug($string, $charset = 'utf-8')
  */
 
 function fileRemoteExist ($filename)
-{       
+{   
+    if (!empty($_POST)) {
+        return;
+    }
+
     $file_headers = @get_headers($filename);
 
-    if(isset($file_headers) && $file_headers[0] == 'HTTP/1.1 404 Not Found')
+    if($file_headers[0] == 'HTTP/1.1 404 Not Found')
     {
          return false;
     } 
-    else if (isset($file_headers) && $file_headers[0] == 'HTTP/1.0 302 Found' && isset($file_headers) && $file_headers[7] == 'HTTP/1.0 404 Not Found')
+    else if ($file_headers[0] == 'HTTP/1.0 302 Found' && $file_headers[7] == 'HTTP/1.0 404 Not Found')
     {
         return false;
     } 
