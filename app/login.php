@@ -6,7 +6,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/config/public_functions.php');
 <html>
 <head>
 <meta charset="utf-8">
-<title>loires LOGIN</title>
+<title>bigben LOGIN</title>
 <link href="/app/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="/app/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="/app/css/AdminLTE.min.css">
@@ -15,7 +15,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/config/public_functions.php');
 <NOSCRIPT><meta http-equiv="refresh" content="0; url=noscript.html"></NOSCRIPT>
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <style>
-.login-box-body{background-color:rgba(0,0,0,0.6);color:#FFF!important}.login-logo{background-color:#FFF;color:#FFF!important;margin-bottom:0!important;padding:20px 0!important}.login-logo a{color:#FFF!important}a{color:#FFF!important}a:hover{text-decoration:underline}.response-login{min-height:42px}.logo-color-1{color: #2376F2}
+.login-box-body{background-color:rgba(0,0,0,0.6);color:#FFF!important}.login-logo{background-color:#FFF;color:#FFF!important;margin-bottom:0!important;}.login-logo a{color:#FFF!important}a{color:#FFF!important}a:hover{text-decoration:underline}.response-login{min-height:42px}.logo-color-1{color: #2376F2}
 </style>
 </head>
 
@@ -37,7 +37,7 @@ $i = array_rand($bg, 1);
 
 <div class="login-box">
       <div class="login-logo">
-          <img src="/assets/images/loires.png" class="img-responsive center-block">
+          <img src="/assets/images/bigbe.jpeg" class="img-responsive center-block">
       </div>
       <div class="login-box-body">
           <p class="login-box-msg">Iniciar a sessão</p>

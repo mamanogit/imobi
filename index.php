@@ -1,4 +1,6 @@
-﻿<?php require_once('header.php'); ?>
+﻿<?php 
+header('Location: /app');
+require_once('header.php'); ?>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
